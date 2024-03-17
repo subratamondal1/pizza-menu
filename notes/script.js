@@ -240,4 +240,15 @@ const titleAuthors = books.map((book)=> (
     }))
 console.log(titleAuthors)
 
+// Array Filter Method
+const evenNumbers = [1,2,3,4,5].filter((element)=> element%2===0)
+console.log(evenNumbers)
 
+const longBooks = books.filter((book) => book.pages > 500);
+console.log(longBooks);
+
+const longBooksWithMovie = books.filter((book) => book.pages > 800).filter((book) => book.hasMovieAdaptation);
+console.log(longBooksWithMovie);
+
+const adventureBooks = books.filter((book)=>book.genres.includes("adventure")).map((book)=>book.title)
+console.log(adventureBooks)
