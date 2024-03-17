@@ -175,3 +175,12 @@ console.log(`Welcome! ${name}`)
 // Ternary Operator
 const pagesRange = pages > 1000 ? "Over Thousand" : "Less Than Thousand"
 console.log(pages,pagesRange)
+
+// Arrow Functions
+// function getYear(str){
+//     return str.split("-")[0]
+// }
+
+const getYear = (str) => str.split("-")[0]
+const {publicationDate} = book
+console.log(publicationDate, getYear(publicationDate));
