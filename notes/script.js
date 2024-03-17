@@ -256,3 +256,14 @@ console.log(adventureBooks)
 // Array Reduce Method
 const pagesAllBook = books.reduce((accumulator, book)=> accumulator+book.pages,0)
 console.log(pagesAllBook)
+
+// Array Sort Method
+const arr = [4,2,6,5,8,9]
+const sortedArrAsc = arr.slice().sort((a,b)=> a-b)
+console.log(sortedArrAsc)
+
+const sortedArrDsc = arr.slice().sort((a,b)=> b-a)
+console.log(sortedArrDsc)
+
+const sortBooks = books.sort((a,b)=>a.pages-b.pages)
+console.log(sortBooks)
