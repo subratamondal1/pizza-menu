@@ -131,6 +131,7 @@ function getBook(id) {
 }
 
 // Destructuring
+// Object Destructuring
 const book = getBook(2);
 // const title = book.title;
 // const author = book.author;
@@ -143,7 +144,27 @@ console.log(author);
 console.log(pages);
 console.log(genres);
 
-console.log("Array Destructuring works on Index Position Order");
-const [primaryGenre, secondaryGenre] = genres;
+// Array Destructuring
+// console.log("Array Destructuring works on Index Position Order");
+// const [primaryGenre, secondaryGenre] = genres;
+// console.log(primaryGenre);
+// console.log(secondaryGenre);
+
+// Rest Operator: stores the rest of the values
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
 console.log(primaryGenre);
 console.log(secondaryGenre);
+console.log("otherGenres contains all the rest of the values in it");
+console.log(otherGenres);
+
+// Spread Operator: spreads the value into one array or object
+const newGenres = ["epic fantasy", ...genres];
+console.log(newGenres);
+
+const updatedBook = {
+  ...book, // copying all the data of book
+  moviePublicationDate: "2001-12-19", // adding new data
+  pages: 300, // overriding pages
+};
+console.log(updatedBook);
+
