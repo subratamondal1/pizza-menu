@@ -184,3 +184,19 @@ console.log(pages,pagesRange)
 const getYear = (str) => str.split("-")[0]
 const {publicationDate} = book
 console.log(publicationDate, getYear(publicationDate));
+
+// Short Circuiting
+console.log(true && "subrata"); // returns the second operand if it's true
+// It's short circuiting, result is declared based on the first operand only
+console.log(false && "subrata"); // returns the first operand if it's false
+
+// It's short circuiting, result is declared based on the first operand only
+console.log(true || "subrata"); // returns the first operand if it's true
+console.log(false || "subrata"); // returns the second operand if the first operand is false
+
+console.log(true ?? "subrata??") // true
+console.log(false ?? "subrata??") // false
+console.log(0 ?? "subrata??0") // 0
+console.log("" ?? "subrata?? ") // ""
+console.log(null ?? "subrata??null") // subrata??null
+console.log(undefined ?? "subrata??undefined") // subrata??undefined
