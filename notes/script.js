@@ -212,6 +212,8 @@ function getTotalCount(book){
 console.log(getTotalCount(book))
 */
 
+/*
+
 // Array Map Method
 const books = getBooks();
 
@@ -288,3 +290,11 @@ console.log(booksAfterDelete)
 // Update the book object
 const booksAfterUpdate = books.map((book)=>book.id===3 ? {...books, author:"Subrata Mondal"}:book)
 console.log(booksAfterUpdate)
+*/
+
+// Asynchronous Javascript: Promises
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+console.log("Subrata Mondal")
