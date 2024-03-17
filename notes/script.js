@@ -130,6 +130,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
+/*
 // Destructuring
 // Object Destructuring
 const book = getBook(2);
@@ -209,3 +210,34 @@ function getTotalCount(book){
 }
 
 console.log(getTotalCount(book))
+*/
+
+// Array Map Method
+const books = getBooks();
+
+const x = [1,2,3,4,5].map((element)=> element**2)
+console.log(x)
+
+const y = ["a", "b", "c", "d", "e"].map((element)=> element.toUpperCase())
+console.log(y)
+
+const titles = books.map((book)=>book.title)
+console.log(titles)
+
+// const titleAuthor = books.map((book)=> {
+//     return {
+//         "title":book.title,
+//         "author":book.author
+//     }
+// })
+// console.log(titleAuthor)
+
+const titleAuthors = books.map((book)=> (
+    {
+        "title":book.title,
+        "author":book.author,
+        "pages":book.pages
+    }))
+console.log(titleAuthors)
+
+
