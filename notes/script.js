@@ -172,5 +172,6 @@ console.log(updatedBook);
 const name = "Subrata Mondal"
 console.log(`Welcome! ${name}`)
 
-
-
+// Ternary Operator
+const pagesRange = pages > 1000 ? "Over Thousand" : "Less Than Thousand"
+console.log(pages,pagesRange)
