@@ -252,3 +252,7 @@ console.log(longBooksWithMovie);
 
 const adventureBooks = books.filter((book)=>book.genres.includes("adventure")).map((book)=>book.title)
 console.log(adventureBooks)
+
+// Array Reduce Method
+const pagesAllBook = books.reduce((accumulator, book)=> accumulator+book.pages,0)
+console.log(pagesAllBook)
