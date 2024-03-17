@@ -267,3 +267,24 @@ console.log(sortedArrDsc)
 
 const sortBooks = books.sort((a,b)=>a.pages-b.pages)
 console.log(sortBooks)
+
+// Immutable Arrays
+
+// Add book object to array
+const newBook = {
+    id:6,
+    title:"Harry Potter",
+    author: "J.K. Rowling"
+}
+
+const addedNewBook = [...books, newBook]
+console.log(addedNewBook)
+
+// Delete a book object from array
+console.log("Delete a book via Array Filtering")
+const booksAfterDelete = addedNewBook.filter((book)=> book.id !== 6)
+console.log(booksAfterDelete)
+
+// Update the book object
+const booksAfterUpdate = books.map((book)=>book.id===3 ? {...books, author:"Subrata Mondal"}:book)
+console.log(booksAfterUpdate)
