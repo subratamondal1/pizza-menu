@@ -168,3 +168,9 @@ const updatedBook = {
 };
 console.log(updatedBook);
 
+// Template Literals
+const name = "Subrata Mondal"
+console.log(`Welcome! ${name}`)
+
+
+
