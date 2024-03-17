@@ -200,3 +200,12 @@ console.log(0 ?? "subrata??0") // 0
 console.log("" ?? "subrata?? ") // ""
 console.log(null ?? "subrata??null") // subrata??null
 console.log(undefined ?? "subrata??undefined") // subrata??undefined
+
+// Optional Chaining
+function getTotalCount(book){
+    const goodreads = book.reviews?.goodreads?.reviewsCount;
+    const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+    return goodreads+librarything
+}
+
+console.log(getTotalCount(book))
