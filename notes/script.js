@@ -291,10 +291,21 @@ console.log(booksAfterDelete)
 const booksAfterUpdate = books.map((book)=>book.id===3 ? {...books, author:"Subrata Mondal"}:book)
 console.log(booksAfterUpdate)
 */
-
+/*
 // Asynchronous Javascript: Promises
 fetch("https://jsonplaceholder.typicode.com/todos")
   .then((response) => response.json())
   .then((data) => console.log(data));
 
+// This block of code runs before the fetch block
 console.log("Subrata Mondal")
+*/
+
+// Asynchronous Javascript: async/await
+async function getTodos(){
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await response.json()
+  console.log(data)
+}
+
+getTodos()
